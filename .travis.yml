@@ -11,3 +11,6 @@ services:
 
 script:
   - go test -v ./...
+  - CGO_ENABLED=0 go build -o demo
+  
+  - echo "$REGISTRY_PASSWORD" | docker login --username $REGISTRY_USER --password-stdin
