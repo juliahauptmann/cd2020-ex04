@@ -1,0 +1,13 @@
+
+os: linux
+
+lagnuage: go
+
+go:
+  - 1.14.x
+
+services:
+  - docker
+
+script:
+  - go test -v ./...
